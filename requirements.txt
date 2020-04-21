@@ -98,5 +98,5 @@ virtualenv==16.7.7
 waitress==1.4.3
 watson-developer-cloud==2.10.0
 websocket-client==0.48.0
-Werkzeug==0.14.1
+Werkzeug==0.15.3
 wrapt==1.11.2
