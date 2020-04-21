@@ -1,1 +1,1 @@
-### FOR VOICE MODEL ###
+### FOR VOICE MODEL ONLY ###
