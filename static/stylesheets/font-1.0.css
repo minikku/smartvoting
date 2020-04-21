@@ -1,0 +1,27 @@
+/*fonts*/
+@font-face {
+    font-family: 'skv-thin';
+    src: url(../fonts/skv_thin.woff);
+}
+
+@font-face {
+    font-family: 'skv-text';
+    src: url(../fonts/skv_text.woff);
+}
+
+@font-face {
+    font-family: 'skv-medium';
+    src: url(../fonts/skv_medium.woff);
+}
+
+.skv-thin {
+    font-family: 'skv-thin';
+}
+
+.skv-text {
+    font-family: 'skv-text';
+}
+
+.skv-medium {
+    font-family: 'skv-medium';
+}

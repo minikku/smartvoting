@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Smart Voting | ระบบลงคะแนนเสียงอัจฉริยะ</title>
+    <link rel="stylesheet" type="text/css" href="../static/stylesheets/semantic.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/stylesheets/main-theme.css"/>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/vote.png') }}" />
+
+</head>
+
+<body class="exampleBody">
+<div id="mainColumn" class="ui middle aligned center aligned grid">
+    <div id="mainForm" class="ui large form">
+        <div class="main-header-box">
+            <img src="{{ url_for('static', filename='images/vote.png') }}" class="main-header-icon"><br>
+            {#            <span class="main-header-text-1">Smart Voting</span><br>#}
+            <span class="main-header-text-2">ระบบลงคะแนนเสียงอัจฉริยะ</span>
+        </div>
+
+{#        <div class="main-option-menu-box">#}
+{#            <div id="enrollOptionButton" class="main-option-menu-bt">#}
+{#                <div>ลงทะเบียนผู้ใช้ใหม่</div>#}
+{#            </div>#}
+{##}
+{#            <div id="authOptionButton" class="main-option-menu-bt">#}
+{#                <div>เข้าสู่ระบบ</div>#}
+{#            </div>#}
+{#        </div>#}
+
+        <div class="main-option-menu-box" style="display: block;padding-left: 15%;padding-right: 15%;">
+            <div id="enrollOptionButton" class="fluid ui button viBtnStyle"
+                 style="font-family: skv-text;font-size: 1.2em;background-color: darkgrey;height: 3em;">
+                <div class="content">ลงทะเบียนผู้ใช้ใหม่</div>
+            </div>
+
+            <div id="authOptionButton" class="fluid ui button viBtnStyle" tabindex="0"
+                 style="font-family: skv-text;font-size: 1.2em;background-color: deeppink;height: 3em;">
+                <div class="content">เข้าสู่ระบบ</div>
+            </div>
+        </div>
+
+        <!-- <div id="signupButton" class="fluid ui animated button viBtnStyle viBtnColor" tabindex="0">
+          <div class="visible content">Sign Up</div>
+          <div class="hidden content">
+            <
+            Enroll a New User
+          </div>
+        </div>
+
+        <div id="signinButton" class="fluid ui animated button viBtnStyle viBtnColor" tabindex="0">
+          <div class="visible content">Sign In</div>
+          <div class="hidden content">
+            
+            Authenticate an Existing User
+          </div>
+        </div> -->
+
+    </div>
+</div>
+
+{#    <div class="ui inverted vertical footer segment form-page">#}
+{#      <div class="ui center aligned container">#}
+{#        - VoiceSens by Bedang Sen -#}
+{#      </div>#}
+{#    </div>#}
+</body>
+
+<script src="../static/javascript/main.js"></script>
+
+</html>

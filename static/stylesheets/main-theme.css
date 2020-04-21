@@ -1,0 +1,198 @@
+/*fonts*/
+@import "font-1.0.css";
+
+body, .exampleBody {
+    /* background-color: #2B2B2B; */
+    /*background-color: #ECF0F1;*/
+    background-color: white;
+    font-family: skv-text;
+}
+
+/*main.html page*/
+.main-header-box {
+    display: block;
+    text-align: center;
+}
+
+.main-header-icon {
+    width: 10em;
+}
+
+.main-header-text-1 {
+    font-family: skv-medium;
+    font-size: 2em;
+}
+
+.main-header-text-2 {
+    font-family: skv-medium;
+    font-size: 2em;
+}
+
+.main-option-menu-box {
+    display: block;
+    text-align: center;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.main-option-menu-bt {
+    display: flex;
+    height: 2.5em;
+    width: auto;
+    font-family: skv-text;
+    font-size: 1.5em;
+    color: #828282;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #828282;
+    /*background-color: grey;*/
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.main-option-menu-bt-v2 {
+    font-family: skv-text;
+    font-size: 1.2em;
+    background-color: darkgrey;
+    height: 3em;
+}
+
+
+.enroll-header-box {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.enroll-text-1 {
+    font-size: 1.8em;
+    font-family: skv-text;
+}
+
+.enroll-label-txt {
+    font-family: skv-text;
+    font-size: 2em;
+    color: dimgrey;
+}
+
+
+#mainColumn {
+    /* Make more responsive */
+    width: 100vw;
+    height: 95vh;
+    align-items: center;
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+#mainForm {
+    /* Make more responsive */
+    width: 40vw;
+    /* height: 95vh; */
+    align-items: center;
+    /* padding: 0px !important; */
+    /* margin: 0px !important; */
+}
+
+#waveform {
+    background-color: #2B2B2B;
+}
+
+/* .secondColor {
+  background-color: #2B2B2B;
+} */
+
+.loginText, .loginText:hover {
+    color: #000000;
+    font-size: 36px !important;
+}
+
+.unlockedText {
+    color: #000000;
+    font-size: 36px !important;
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.viBtnColor {
+    background-color: #01BAB6 !important;
+}
+
+.viBtnStyle {
+    width: 100%;
+    /* max-width: 440px; */
+    color: #FFFFFF !important;
+    margin-top: 20px !important;
+}
+
+
+#messageLabel, #messageLabel:hover {
+    cursor: none !important;
+    opacity: 0.0;
+}
+
+.loginLogo {
+    max-width: 100px;
+}
+
+#logoutBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    max-width: 160px;
+}
+
+#formOverlay {
+    padding-bottom: 20px;
+}
+
+#livenessContainer {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.biometricOptionsContainer {
+    display: flex;
+}
+
+#biometricOptions {
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#loadingContainer {
+    /* Hide to start */
+    display: none;
+    margin-top: 20px;
+}
+
+#biometricOptions {
+    display: none;
+}
+
+.enrollmentTooltip {
+    opacity: 0.0;
+}
+
+#enrollVoice {
+    display: inline-flex;
+    position: absolute;
+    left: 84%;
+}
+
+#enrollFace {
+    display: inline-flex;
+    position: absolute;
+    left: 84%;
+}
+
+#enrollVideo {
+    display: inline-flex;
+    position: absolute;
+    right: 92%;
+}

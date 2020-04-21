@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Smart Voting</title>
+  <link rel="stylesheet" type="text/css" href="../static/stylesheets/semantic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../static/stylesheets/main-theme.css"/>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/vote.png') }}" />
+
+</head>
+
+<body class="exampleBody" data-url="{{ url_for('voice') }}">
+  <div id="mainColumn" class="ui middle aligned center aligned grid">
+    <div id="mainForm" class="ui large form">
+      <div class="main-header-box">
+            <img src="{{ url_for('static', filename='images/vote.png') }}" class="main-header-icon"><br>
+            {#            <span class="main-header-text-1">Smart Voting</span><br>#}
+            <span class="main-header-text-2">ระบบลงคะแนนเสียงอัจฉริยะ</span>
+        </div>
+        <br><br>
+
+      <div class="ui segment secondColor">
+
+          <div id="enrollmentMessage" class="enroll-header-box">
+                        <div class="enroll-text-1">
+                            ยืนยันตัวตนด้วยเสียง
+                        </div>
+                    </div>
+
+        <div id="waveform"></div>
+
+        <!-- <div id="progress" class="ui progress">
+          <div class="bar">
+            <div class="progress"></div>
+          </div>
+          <div class="label">Uploading Files</div>
+        </div> -->
+          <br>
+
+        <button id="startRecButton" class="fluid ui button">
+          <i class="microphone icon"></i>
+          เริ่มการบันทึก
+        </button>
+        <button id="stopRecButton" class="fluid ui button">
+          <i class="microphone slash icon"></i>
+          หยุดการบันทึก
+        </button>
+
+        <div id="environmentMessage" class="ui red icon message">
+          <i class="notched circle loading icon"></i>
+          <div class="content">
+            <div class="header">
+              กำลังตรวจสอบเสียงแวดล้อม...
+            </div>
+            <p id="recordBody">กรุณารอประมาณ 5 วินาที</p>
+          </div>
+        </div>
+
+        <div id="vadMessage" class="ui yellow icon message">
+          <i class="notched circle loading icon"></i>
+          <div class="content">
+            <div class="header">
+              กำลังวิเคราะห์
+            </div>
+            <p id="recordBody">กรุณารอสักครู่...</p>
+          </div>
+        </div>
+
+        <div id="passphraseMessage" class="ui icon message">
+          <i class="shield alternate icon"></i>
+          <div class="content">
+            <div class="header">
+              โปรดออกเสียงคำที่ปรากฎให้ชัดเจน
+            </div>
+            <p id="randomPassphrase"> {{ passphrase }} </p>
+          </div>
+        </div>
+
+        <div id="acceptMessage" class="ui positive message">
+          <i id="close_button_accept" class="close icon"></i>
+          <div class="header">
+            สำเร็จแล้ว
+          </div>
+          <p>เสียงของคุณได้รับการยืนยันแล้ว</p>
+        </div>
+
+        <div id="rejectMessage" class="ui negative message">
+          <i id="close_button_reject" class="close icon"></i>
+          <div class="header">
+            ไม่สามามารถืนยันเสียงของคุณได้
+          </div>
+          <p>โปรดลองอีกครั้ง
+{#            <ul class="list">#}
+{#              <li>The words you have spoken aren't entirely correct</li>#}
+{#              <li>IBM Speech to Text could not understand the audio.</li>#}
+{#              <li>Could not request results from IBM Speech to Text service.</li>#}
+{#            </ul>#}
+          </p>
+        </div>       
+
+      </div>
+      <div id="enrollmentComplete" class="ui bottom attached positive message">
+        <i class="icon succesful"></i>
+       ลงทะเบียนเสียง (voiceprint) เรียบร้อยแล้ว <a href="/auth">เข้าสู่ระบบ</a>.
+      </div>
+
+      <div id="authenticationComplete" class="ui bottom attached positive message">
+        <i class="icon succesful"></i>
+       ยืนยันตัวตนสำเร็จแล้ว <a href="/votehome">ไปยังหน้าลงคะแนน</a>.
+      </div>
+
+      <div id="authenticationInComplete" class="ui bottom attached negative message">
+        <i class="icon succesful"></i>
+       ไม่สามารถยืนยันตัวตนได้ <a href="/">กลับไปยังหน้าแรก</a>.
+      </div>
+
+    </div>
+  </div>
+
+{#  <div class="ui inverted vertical footer segment form-page">#}
+{#    <div class="ui center aligned container">#}
+{#      - VoiceSens by Bedang Sen -#}
+{#    </div>#}
+{#  </div>#}
+</body>
+
+<script src="https://unpkg.com/wavesurfer.js"></script>
+<script src="../static/javascript/p5.min.js"></script>
+<script src="../static/javascript/p5.sound.min.js"></script>
+<script src="../static/javascript/p5.dom.min.js"></script>
+<script src="../static/javascript/wavesurfer.microphone.min.js"></script>
+<script src="../static/javascript/identify.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+</html>

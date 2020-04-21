@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Smart Voting</title>
+    <link rel="stylesheet" type="text/css" href="../static/stylesheets/semantic.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/stylesheets/main-theme.css"/>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/vote.png') }}" />
+
+</head>
+
+<body class="exampleBody">
+<div id="mainColumn" class="ui middle aligned center aligned grid">
+    <div id="mainForm" class="ui large form">
+        <div class="main-header-box">
+            <img src="{{ url_for('static', filename='images/vote.png') }}" class="main-header-icon"><br>
+            {#            <span class="main-header-text-1">Smart Voting</span><br>#}
+            <span class="main-header-text-2">ระบบลงคะแนนเสียงอัจฉริยะ</span>
+        </div>
+        <br><br>
+
+        <div id="formOverlay">
+            <form>
+                <div class="ui segment">
+                    <div id="enrollmentMessage" class="enroll-header-box">
+                        <div class="enroll-text-1">
+                            เข้าสู่ระบบ
+                        </div>
+                    </div>
+                    <div class="field" id="userField">
+                        <div class="ui left icon input">
+                            <i class="user icon"></i>
+                            <input type="text" name="username" placeholder="ชื่อผู้ใช้" style="height: 3em;">
+                        </div>
+                        <div id="usernamePointer" class="ui red basic below pointing label">
+                            ไม่พบชื่อผู้ใช้นี้ โปรดลงทะเบียน <a href="/enroll">ที่นี่</a>.
+                        </div>
+                    </div>
+                    <div class="field" id="passwordField">
+                        <div class="ui left icon input">
+                            <i class="lock icon"></i>
+                            <input type="password" name="password" placeholder="รหัสผ่าน" autocomplete="none"
+                                   style="height: 3em;">
+                        </div>
+                        <div id="passwordPointer" class="ui red basic below pointing label">
+                            กรุณากรอกรหัสผ่านให้ถูกต้อง
+                        </div>
+                    </div>
+                    <!-- <div class="field" id="repasswordField">
+                      <div class="ui left icon input">
+                        <i class="lock icon"></i>
+                        <input type="password" name="repassword" placeholder="Re-enter your Password" autocomplete="none">
+                      </div>
+                      <div id="repasswordPointer" class="ui red basic below pointing label">
+                        Your passwords don't match.
+                      </div>
+                    </div> -->
+                </div>
+            </form>
+            <!-- <div id="noUser" class="ui bottom attached negative message">
+              <i class="icon succesful"></i>
+             Sorry the given user does not exist in our systems. <a href="/enroll">Would you like to enroll?</a>.
+            </div> -->
+        </div>
+
+        <div id="loadingContainer">
+            <div class="ui active massive loader" id="loading"></div>
+        </div>
+
+        <!-- <div id="loginBtn" class="ui fluid large button viBtnStyle viBtnColor">
+          Enroll New User
+        </div> -->
+
+        <!-- <button class="fluid ui button viBtnStyle viBtnColor">Fits container</button> -->
+
+        <div style="display: flex;width: 100%">
+            <div id="backButton" class="fluid ui animated button viBtnStyle"
+                 style="font-family: skv-text;font-size: 1.2em;background-color: darkgrey;width: 30%;">
+                <div class="visible content">ยกเลิก</div>
+                <div class="hidden content">
+                    <!-- <img src="../images/arrow-pointing-to-right.png" class="ui center aligned"> -->
+                    กลับไปหน้าแรก
+                </div>
+            </div>
+
+            <div id="nextButton" class="fluid ui animated button viBtnStyle" tabindex="0"
+                 style="font-family: skv-text;font-size: 1.2em;background-color: deeppink;width: 70%;">
+                <div class="visible content">ถัดไป</div>
+                <div class="hidden content">
+                    ยืนยันตัวตนด้วยเสียง
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+{#    <div class="ui inverted vertical footer segment form-page">#}
+{#      <div class="ui center aligned container">#}
+{#        - VoiceSens by Bedang Sen -#}
+{#      </div>#}
+{#    </div>#}
+</body>
+
+<script src="../static/javascript/auth.js"></script>
+
+</html>
