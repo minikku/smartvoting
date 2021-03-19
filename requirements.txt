@@ -16,7 +16,7 @@ cryptography==2.8
 cycler==0.10.0
 dask==1.0.0
 decorator==4.3.0
-Django==2.2.10
+Django==2.2.18
 docutils==0.14
 Flask==1.0.2
 Flask-Session==0.3.1
