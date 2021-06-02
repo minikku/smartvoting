@@ -93,7 +93,7 @@ tensorflow-estimator==2.0.1
 termcolor==1.1.0
 toolz==0.9.0
 typing==3.6.6
-urllib3==1.24.2
+urllib3==1.26.5
 virtualenv==16.7.7
 waitress==1.4.3
 watson-developer-cloud==2.10.0
